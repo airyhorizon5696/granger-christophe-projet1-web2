@@ -8,6 +8,7 @@
   </head>
   <body>
     <header>
+      <!-- Barre de naviguation-->
       <nav class="nav-bar">
         <ul>
           <div class="nav-bar__logo--containeur">
@@ -18,8 +19,7 @@
           </div>
           <li>
             <a class="nav-bar__ancre" href="#programation_ancre"
-              >Programation</a
-            >
+              >Programation</a>
           </li>
           <li>
             <a class="nav-bar__ancre" href="#horaire_ancre">Horaire</a>
@@ -46,82 +46,226 @@
       </nav>
     </header>
     <main>
+      <!-- 1e section-->
       <section class="hero_section">
         <h1 class="hero_section__title">Lumière.urbaine</h1>
         <p class="hero_section__description">
           3 jours de musique et d'art immersif.
         </p>
 
-        <a href="hero_section__link--info">En savoir plus</a>
-        <a class="hero_section__link--billet" href="">Acheter des billets</a>
+        <a class="hero_section__link--info" href="">En savoir plus</a>
+        <a class="hero_section__link--billet " href="">Acheter des billets</a>
       </section>
-      <section class="" id="programation_ancre">
+
+      <!-- 2e section -->
+      <section class="programation_section" id="programation_ancre">
         <h2 class="programmation_section__title">Programmation</h2>
       </section>
       <section class="horaire_section" id="horaire_ancre">
-        <h2 class="horaire_section__title">horaire</h2>
+        <h2 class="horaire_section__description--title">horaire</h2>
         <p class="horaire_section__description">
           Consultez notre horaire des performances.
         </p>
+        <!-- liste des dates etc-->
         <div class="horaire_section__list">
           <article class="horaire_section__article">
-            <img class="horaire_section__article__image" src="./asset/img/ico_calendrier.svg" alt="vecteur d'un calendrier">
+            <img
+              class="horaire_section__article__image"
+              src="./asset/img/ico_calendrier.svg"
+              alt="vecteur d'un calendrier"
+            />
             <h3 class="horaire_section__article__title">Vendredi</h3>
             <p class="horaire_section__article__description">
               Performances de 15h à 23h.
             </p>
           </article>
           <article class="horaire_section__article">
-            <img class="horaire_section__article__image" src="./asset/img/ico_calendrier.svg" alt="vecteur d'un calendrier">
+            <img
+              class="horaire_section__article__image"
+              src="./asset/img/ico_calendrier.svg"
+              alt="vecteur d'un calendrier"
+            />
             <h3 class="horaire_section__article__title">Samedi</h3>
             <p class="horaire_section__article__description">
-              Performances de 12h à 22h.   
+              Performances de 12h à 22h.
             </p>
           </article>
 
           <article class="horaire_section__article">
-            <img class="horaire_section__article__image" src="./asset/img/ico_calendrier.svg" alt="vecteur d'un calendrier">
+            <img
+              class="horaire_section__article__image"
+              src="./asset/img/ico_calendrier.svg"
+              alt="vecteur d'un calendrier"
+            />
             <p class="horaire_section__article__lettre">D</p>
             <h3 class="horaire_section__article__title">Dimanche</h3>
             <p class="horaire_section__article__description">
               Performances de 14h à 21h.
-            </p> 
+            </p>
           </article>
         </div>
       </section>
+
+      <!-- 3e section-->
       <section class="artiste_section" id="artistes_ancre">
         <h2 class="artistes_section__title">Artistes</h2>
         <article class="artiste_section__article">
-            <div>
-                <p class="artiste_section__list--badge">En vedette</p> 
-            </div>
-            <a class="artiste_section_image" href="">Artistes 1</a>
+          <div>
+            <p class="artiste_section__list--badge">En vedette</p>
+          </div>
+          <a class="artiste_section_image">Artistes 1</a>
+          <p class="artiste_section__description">
+            Bob l'artiste favori des médias numériques
+          </p>
+          <p class="artiste_section__description--genre">Genre: Pop</p>
+
+          <!-- a mettre en row-->
         </article>
         <article class="artiste_section__article">
-            <a class="artiste_section_image" href="">Artistes 2</a>
+          <a class="artiste_section_image">Artistes 2</a>
+          <p class="artiste_section__description">
+            George l'artiste émergeant très prometteur
+          </p>
+          <p class="artiste_section__description--genre">Genre: Rock</p>
         </article>
         <article class="artiste_section__article">
-            <a class="artiste_section_image" href="">Artistes 3</a>
+          <a class="artiste_section_image">Artistes 3</a>
+          <p class="artiste_section__description">Mélo Super Nova</p>
+          <p class="artiste_section__description--genre">Genre: Jazz</p>
         </article>
         <article class="artiste_section__article">
-            <a class="artiste_section_image" href="">Artistes 4</a>
+          <a class="artiste_section_image">Artistes 4</a>
+          <p class="artiste_section__description">Marie la Kid Synthétique</p>
+          <p class="artiste_section__description--genre">Genre: Électro</p>
         </article>
       </section>
+
+      <!-- 4e section-->
       <section class="billets_section" id="billets_ancre">
         <h2 class="billets_section__title">Billets</h2>
+        <article class="billets_section__article">
+          <p class="billets_section__icon">🎫</p>
+          <h3 class="billets_section__description--title">Standad</h3>
+          <p class="billets_section__price">$50</p>
+        </article>
+        <article class="billets_section__article">
+          <p class="billets_section__icon">🔖</p>
+          <h3 class="billets_section__description--title">VIP</h3>
+          <p class="billets_section__price">$100</p>
+        </article>
+        <article class="billets_section__article">
+          <p class="billets_section__icon">🌟</p>
+          <h3 class="billets_section__description--title">Passeport 3 jours</h3>
+          <p class="billets_section__price">$120</p>
+        </article>
       </section>
+
+      <!-- 5e section-->
       <section class="partenaires_section" id="partenaires_ancre">
         <h2 class="partenaires_section__title">Partenaires</h2>
+        <p class="partenaires_section__title--description">
+          Nos précieux partenaires.
+        </p>
+        <!-- a mettre en row-->
+        <article class="partenaires_section__article">
+          <img
+            src="./asset/img/ico_stream.svg"
+            alt=""
+            class="parenaires_section__iconeSVG"
+          />
+          <h3 class="partenaires_section__article--description">
+            Partenaire inc.
+          </h3>
+        </article>
+
+        <article class="partenaires_section__article">
+          <img
+            src="./asset/img/ico_gesture.svg"
+            alt=""
+            class="parenaires_section__iconeSVG"
+          />
+          <h3 class="partenaires_section__article--description">
+            Précieux et investit
+          </h3>
+        </article>
+
+        <article class="partenaires_section__article">
+          <img
+            src="./asset/img/ico_insights.svg"
+            alt=""
+            class="parenaires_section__iconeSVG"
+          />
+          <h3 class="partenaires_section__article--description">
+            Une compagnie qui investit
+          </h3>
+        </article>
+
+        <article class="partenaires_section__article">
+          <img
+            src="./asset/img/ico_send.svg"
+            alt=""
+            class="parenaires_section__iconeSVG"
+          />
+          <h3 class="partenaires_section__article--description">
+            Super partenaire
+          </h3>
+        </article>
       </section>
+
+      <!-- 6e section-->
       <section class="temoignage_section" id="témoignages_ancre">
         <h2 class="temoignage_section__title">Témoignages</h2>
+        <p class="temoignage_section__title--description">
+          Ecoutez ce que les gens disent!
+        </p>
+        <article class="temoignage_section__article">
+          <img
+            src="./asset/img/ico_person.svg"
+            alt="une icone d'une personne "
+            class="temoignage_section__icone"
+          />
+          <p class="nom">Anne</p>
+          <p class="commentaire">
+            Un festival incroyable avec une ambiance électrisante!
+          </p>
+        </article>
+        <article class="temoignage_section__article">
+          <img
+            src="./asset/img/ico_person.svg"
+            alt="une icone d'une personne "
+            class="temoignage_section__icone"
+          />
+          <p class="nom">Marco</p>
+          <p class="commentaire">
+            Des artistes de haut niveau et une organisation parfaite.
+          </p>
+        </article>
       </section>
+
+      <!-- 7e section-->
       <section class="contact_section" id="contact_ancre">
-        <h2 class="contact_section__title">Contact</h2> 
+        <h2 class="contact_section__title">Contact</h2>
+        <p class="contact_section_title--description">Nous aimerions avoir de vos nouvelles!</p>
+        <form class="contact_section__form">
+          <label for="name">nom</label>
+          <input type="text" placeholder="Entrez votre nom" />
+          <label for="email">Email</label>
+          <input type="text" placeholder="Entrez votre email" />
+          <label for="message">Message</label>
+          <input type="text" placeholder="Écrivez votre message ici" />
+          <button class="contact_section__button--secondary">Annuler</button>
+          <button class="contact_section__button--primary">Envoyer</button>
+        </form>
       </section>
     </main>
-    <footer>
-      <section></section>
+    <!-- BAS DE PAGE-->
+    <footer class="bas_de_page">
+      <section class="bas_de_page__container">
+        <a class="bas_de_page__link--billet" href="">Obetnez-vos billet</a> <!-- Même balise que la naviguation car c'est le même lien et même couleurs-->
+        <a href="" class="bas_de_page__links">Politique de confidentialité</a>
+        <a href="" class="bas_de_page__links">Conditions d'utilisation</a>
+        <a href="" class="bas_de_page__links">© 2023 Festival Lumière Urbaine</a>
+      </section>
     </footer>
   </body>
 </html>
