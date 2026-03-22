@@ -13,3 +13,8 @@ j'ai modifier plusieurs classe de mon html car elle ne respectait pas entieremen
 j'ai continuer mon css j'ai fait 2 nouvelle section et j'ai encore modifier mes classe ( les classe en bas de page; footer)
 
 j'ai terminer la section partenaire, et j'ai commencer la section temoignage. j'aissaie de tout regrouper ce qui vas ensemble, comme la section témoignage qui est essentiellement la même que la section horaire.
+dans la même soirée j'ai aussi terminer la section temoignage, contact et la section de bas de page
+j'ai regrouper le css qui était le même pour les sections comme le padding display flex etc.. et je l'es est mis dans un seule bloc.
+De base mon css était très linéaire, 1 section a la fois, mais maintenant que j'ai regrouper certaine classe ( même si je sais qu'il m'en reste à trier et regrouper ) il est devenue plus "chaotique" j'ai mis des commentaires pour expliquer mes choix
+
+pour le prochain devoirs ou le prochain projet je prévois classer mon css par éléments / blocs et pas par sections.

@@ -10,29 +10,34 @@
   --color-text-primary: black;
   --color-text-accent: #1a2e1a;
   --color-text-secondary: white;
-  --color-accent: #ffd166;
+  --color-accent: #ffd166; /* billet et vedette */
   /* SPACE */
   --space-xs: 4px;
   --space-sm: 8px;
-  --space-md: 16px;
+  --space-md: 12px;
   --space-lg: 24px;
-  --space-xl: 32px;
+  --space-xl: 40px;
   --space-2xl: 48px;
+  --space-gapsection: 60px;
+  --space-list: 40px;
+  --section-pad-v: 60px; /* padding des sections horizontal et verticale */
+  --section-pad-h: 170px;
   /* FONT SIZE */
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
+  --font-size-xs: 0.75rem; /* 12px*/
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-2xl: 2.5rem; /* 40px */
+  --font-size-hero: 4rem; /* 64px */
   /* RADIUS */
-  --radius-sm: 4px;
-  --radius-md: 6px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
   --radius-lg: 12px;
   --radius-full: 9999px;
   /* SHADOW */
   --shadow-sm: 0 0 6.2px rgba(255, 255, 255, 0.73);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -48,44 +53,78 @@ body {
 }
 a {
   text-decoration: none;
-  text-decoration: none;
 }
 li {
   list-style: none;
-  display: flex;
 }
 
 h2 {
-  color: #000;
+  color: var(--color-text-primary);
   font-family: "Monoton", sans-serif;
-  font-size: 40px;
+  font-size: var(--font-size-2xl);
   font-weight: 400;
   line-height: 48px; /* 120% */
 }
+/* les titres de sections blanche*/
+h2.programmation__title,
+.artiste__title,
+.partenaires__title,
+.contact__title {
+  color: var(--color-bg-dark);
+}
 h3 {
-  color: var(--color-text, #073b4c);
-  font-size: 24px;
+  color: var(--color-bg-dark, #073b4c);
+  font-size: var(--font-size-xl);
   font-weight: 400;
   line-height: 24px; /* 100% */
 }
+
 h4 {
-  color: #000;
+  color: var(--color-text-primary);
   text-align: center;
-  font-size: 24px;
+  font-size: var(--font-size-xl);
   font-weight: 400;
   line-height: 28px; /* 116.667% */
 }
 h5 {
-  font-size: 20px;
+  font-size: var(--font-size-lg); /*  */
   font-weight: 500;
   line-height: 28px; /* 140% */
 }
+
+/* pour le padding de toute les sections*/
+.programmation,
+.horaire,
+.artiste,
+.billets,
+.partenaires,
+.temoignage,
+.contact {
+  display: flex;
+  padding: var(--section-pad-v) var(--section-pad-h);
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-gapsection);
+  align-self: stretch;
+}
+.card__Row--container {
+  /* pour la section programation, artiste, billet et partenaire car c'est la même conteneur*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--space-list);
+  width: 100%;
+  flex-wrap: wrap; /* pour que se sois responsive*/
+}
+
 .subtitle--description {
-  color: #000;
-  font-size: 16px;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
+
 /* Barre de naviguation */
 .nav-bar {
   background: var(--color-bg-dark);
@@ -111,7 +150,7 @@ h5 {
   color: var(--color-secondary);
   text-shadow: 0 0 6.2px rgba(255, 255, 255, 0.73);
   font-family: "Monoton", sans-serif;
-  font-size: 32px;
+  font-size: calc(var(--font-size-base) * 2);
   font-weight: 400;
   line-height: 22px; /* 68.75% */
 }
@@ -129,13 +168,13 @@ h5 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: var(--space-lg);
   flex: 1 0 0;
 }
 
 .nav-bar__ancre {
   color: var(--color-text-secondary);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 400;
   line-height: 22px; /* 137.5% */
 }
@@ -151,7 +190,7 @@ h5 {
   /* pour les enfant (texte a l'intérieur*/
   color: var(--color-text-accent, #1a2e1a);
   text-align: center;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 400;
   line-height: 22px; /* 157.143% */
 }
@@ -164,10 +203,8 @@ h5 {
   padding: 60px;
   justify-content: flex-start;
   align-items: center;
-  gap: 60px;
+  gap: var(--space-gapsection);
   align-self: stretch;
-  height: 729px;
-  padding: 60px;
   background-image: url("../asset/img/hero_image_fbackground.jpg");
   background-size: cover;
   background-position: center;
@@ -178,7 +215,7 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: var(--space-lg);
   flex: 1 0 0;
 }
 
@@ -191,27 +228,27 @@ h5 {
   font-size: 64px;
   font-weight: 400;
   line-height: 48px; /* 75% */
-  gap: 24px;
+  gap: var(--space-lg);
 }
 
 .hero__description {
   color: var(--color-text-secondary);
-  font-size: 40px;
+  font-size: var(--font-size-2xl);
   font-weight: 700;
   line-height: 48px; /* 120% */
-  gap: 24px;
+  gap: var(--space-lg);
 }
 
 .hero__link--container {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: var(--space-md);
 }
 
 .hero__link--info {
   display: flex;
   width: 240px;
-  padding: 12px;
+  padding: var(--space-md);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -220,51 +257,36 @@ h5 {
   background: rgba(0, 0, 0, 0.62);
   /* au enfant (donc le texte a l'interieur*/
   color: var(--color-text-secondary);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 500;
   line-height: 24px; /* 150% */
-  gap: 24px;
+  gap: var(--space-lg);
 }
 
 .hero__link--billet {
   display: flex;
   width: 240px;
-  padding: 12px;
+  padding: var(--space-md);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: var(--radius-md);
   background: var(--color-primary, #118ab2);
   color: var(--color-text-secondary);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 500;
   line-height: 24px; /* 150% */
-  gap: 24px;
+  gap: var(--space-lg);
 }
 
 /* fin section 1 */
 
 /* Début section 2 */
 .programmation,
-.artiste {
+.artiste,
+.partenaires {
   background: var(--color-bg-secondary);
-  display: flex;
   flex-direction: column;
-  padding: 60px 170px;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  align-self: stretch;
-}
-
-.card__Row--container {
-  /* pour la section programation, artiste, billet et partenaire car c'est la même conteneur*/
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  width: 100%;
 }
 
 .programmation__article,
@@ -273,7 +295,7 @@ h5 {
   flex-direction: column;
   align-items: center;
   flex: 1 1 0;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .programmation__image,
@@ -297,7 +319,7 @@ h5 {
   justify-content: center;
   /* pour les enfant (le texte a l'intérieur)*/
   color: var(--color-text-primary);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 500;
 }
 
@@ -315,7 +337,7 @@ h5 {
 
   /* pour les enfant (le texte a l'intérieur)*/
   color: var(--color-text-primary);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 500;
   line-height: 16px;
 }
@@ -323,7 +345,7 @@ h5 {
 .programmation_text__container,
 .artiste_text__container {
   display: flex;
-  padding: 12px;
+  padding: var(--space-md);
   flex-direction: column;
   align-items: stretch;
   gap: 4px;
@@ -333,8 +355,8 @@ h5 {
 
 .programmation_description__title,
 .artiste_description__title {
-  color: var(--color-text, #073b4c);
-  font-size: 24px;
+  color: var(--color-bg-dark);
+  font-size: var(--font-size-xl);
   font-weight: 400;
   line-height: 24px; /* 100% */
   align-self: stretch;
@@ -344,7 +366,7 @@ h5 {
 .artiste__description {
   /* tout les gens donc pour la section programation et artiste*/
   color: var(--color-primary, #118ab2);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 400;
   line-height: 28px; /* 175% */
 }
@@ -358,12 +380,6 @@ h5 {
 .contact,
 .billets {
   background: var(--color-primary);
-  display: flex;
-  padding: 60px 170px;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  align-self: stretch;
 }
 
 .horaire_container__title,
@@ -374,14 +390,14 @@ h5 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 24px;
+  gap: var(--space-lg);
   flex: 1 0 0;
   align-self: stretch;
 }
 .horaire_description__title {
   color: var(--color-text-primary);
   font-family: "Monoton", sans-serif;
-  font-size: 40px;
+  font-size: var(--font-size-2xl);
   font-weight: 400;
   line-height: 48px; /* 120% */
 }
@@ -389,7 +405,7 @@ h5 {
 .horaire__description,
 .temoignage_commentaire {
   color: var(--color-text-primary);
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
@@ -403,7 +419,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  gap: 40px;
+  gap: var(--space-list);
   flex: 1 0 0;
 }
 
@@ -416,7 +432,7 @@ h5 {
   align-items: flex-start;
   gap: 16px;
   flex: 1 0 0;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--color-bg-secondary);
   border-color: rgba(0, 0, 0, 0.1);
@@ -474,14 +490,14 @@ h5 {
   align-items: center;
   flex: 1;
   align-self: stretch;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   border: 5px solid var(--color-accent, #ffd166);
 }
 
 .artiste__list--badge {
   position: absolute;
   left: 11px;
-  top: 12px;
+  top: var(--space-md);
   margin: 11px;
   display: flex;
   padding: 7px 18px;
@@ -496,21 +512,15 @@ h5 {
 
 /* Début section 5 */
 .billets {
-  background: var(--color-primary);
   display: flex;
-  padding: 60px 170px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  align-self: stretch;
 }
 
 .billets__list {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 40px;
+  gap: var(--space-list);
   align-self: stretch;
 }
 
@@ -518,7 +528,7 @@ h5 {
 .partenaires__article {
   /* car c'est le meme css / article a pour la section billets et la section partenaires*/
   display: flex;
-  padding: 12px 0;
+  padding: var(--space-md) 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -533,7 +543,6 @@ h5 {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-
   aspect-ratio: 1/1;
   overflow: hidden;
   background: var(--color-bg-dark, #073b4c);
@@ -547,7 +556,7 @@ h5 {
 }
 .billets__price {
   align-self: stretch;
-  color: #000;
+  color: var(--color-text-primary);
   text-align: center;
   font-size: 28px;
 
@@ -556,9 +565,9 @@ h5 {
 }
 .billet_description__title {
   align-self: stretch;
-  color: #000;
+  color: var(--color-text-primary);
   text-align: center;
-  font-size: 24px;
+  font-size: var(--font-size-xl);
   font-weight: 400;
   line-height: 28px; /* 116.667% */
 }
@@ -568,23 +577,19 @@ h5 {
 .partenaires {
   background: var(--color-bg-secondary);
   display: flex;
-  padding: 60px 170px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  align-self: stretch;
 }
+
 .partenaires__title--description {
   width: 520px;
-  color: #000;
+  color: var(--color-text-primary);
   text-align: center;
 }
 .partenaire_title_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: var(--space-lg);
   align-self: stretch;
 }
 
@@ -604,24 +609,13 @@ h5 {
 /* Début section 7 */
 .temoignage {
   background: var(--color-primary);
-  display: flex;
-  padding: 60px 170px;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  align-self: stretch;
 }
+
 /* fin section 7 */
 
 /* Début section 8 */
 .contact {
   background: var(--color-bg-secondary);
-  display: flex;
-  padding: 60px 170px;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  align-self: stretch;
 }
 
 .contact_form /* container du form*/ {
@@ -629,7 +623,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: var(--space-list);
   flex: 1 0 0;
 }
 .contact_container__label /* containeur de label et de input*/ {
@@ -642,17 +636,17 @@ h5 {
 }
 
 .contact_labelNom {
-  color: var(--color-text, #073b4c);
-  font-size: 14px;
+  color: var(--color-bg-dark);
+  font-size: var(--font-size-sm);
   font-weight: 500;
   line-height: 20px; /* 142.857% */
 }
 .contact_input {
-  padding: 8px 12px;
+  padding: 8px var(--space-md);
   align-items: center;
   gap: 4px;
   align-self: stretch;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--color-bg-secondary);
   /* pour texte interieur etc*/
@@ -660,7 +654,7 @@ h5 {
   color: rgba(0, 0, 0, 0.5);
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 400;
   line-height: 20px; /* 142.857% */
 }
@@ -668,28 +662,28 @@ h5 {
 .contact_button__container {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: var(--space-md);
   align-self: stretch;
   flex-direction: row;
 }
 .contact_button {
   display: flex;
-  padding: 12px;
+  padding: var(--space-md);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1 0 0;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   /* pour le texte a l'intérieur*/
 
-  font-size: 16px;
+  font-size: var(--font-size-base);
   font-weight: 500;
   line-height: 24px;
 }
 .contact_button--secondary {
   background: transparent;
   border: 1px solid var(--color-bg-dark, #073b4c);
-  color: var(----color-text, #073b4c);
+  color: var(--color-bg-dark);
 }
 .contact_button--primary {
   background: var(--color-bg-dark, #073b4c);
@@ -707,22 +701,20 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: var(--space-list);
   align-self: stretch;
 }
 .footer_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: var(--space-gapsection);
 }
 .footer__links {
   width: 236px;
   color: var(--color-text-secondary);
   text-align: center;
-
   font-size: 13px;
-
   font-weight: 400;
   line-height: 28px; /* 215.385% */
 }
