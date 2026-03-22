@@ -238,7 +238,7 @@
         <!-- en column-->
         <h2 class="billets__title">Billets</h2>
         <!-- en row-->
-        <div class="billets__list">
+        <div class="billets__list card__Row--container">
           <!-- enlever les double __ just un mot -->
 
           <article class="billets__article">
@@ -261,10 +261,12 @@
 
       <!-- 6e section-->
       <section class="partenaires" id="partenaires_ancre">
-        <h2 class="partenaires__title">Partenaires</h2>
-        <p class="partenaires__title--description subtitle--description">
-          Nos précieux partenaires.
-        </p>
+        <div class="partenaire_title_container">
+          <h2 class="partenaires__title">Partenaires</h2>
+          <p class="partenaires__title--description subtitle--description">
+            Nos précieux partenaires.
+          </p>
+        </div>
         <!-- a mettre en row-->
         <div class="partenaires__list card__Row--container">
           <article class="partenaires__article">
@@ -311,66 +313,99 @@
 
       <!-- 7e section-->
       <section class="temoignage" id="témoignages_ancre">
-        <h2 class="temoignage__title">Témoignages</h2>
-        <p class="temoignage_title__description subtitle--description">
-          Ecoutez ce que les gens disent!
-        </p>
-        <article class="temoignage__article">
-          <img
-            src="./asset/img/ico_person.svg"
-            alt="une icone d'une personne "
-            class="temoignage__icone"
-          />
-          <p class="nom">Anne</p>
-          <p class="commentaire">
-            Un festival incroyable avec une ambiance électrisante!
+        <div class="temoignage_container__title">
+          <h2 class="temoignage__title">Témoignages</h2>
+          <p class="temoignage_title__description subtitle--description">
+            Ecoutez ce que les gens disent!
           </p>
-        </article>
-        <article class="temoignage__article">
-          <img
-            src="./asset/img/ico_person.svg"
-            alt="une icone d'une personne "
-            class="temoignage__icone"
-          />
-          <p class="nom">Marco</p>
-          <p class="commentaire">
-            Des artistes de haut niveau et une organisation parfaite.
-          </p>
-        </article>
+        </div>
+        <div class="temoignage_list__container">
+          <article class="temoignage__article">
+            <div class="temoignage_icone__container">
+              <img
+                src="./asset/img/ico_person.svg"
+                alt="une icone d'une personne "
+                class="temoignage_icone"
+              />
+            </div>
+            <div class="temoignage_text__container">
+              <h5 class="temoignage_nom">Anne</h5>
+              <p class="temoignage_commentaire">
+                Un festival incroyable avec une ambiance électrisante!
+              </p>
+            </div>
+          </article>
+          <article class="temoignage__article">
+            <div class="temoignage_icone__container">
+              <img
+                src="./asset/img/ico_person.svg"
+                alt="une icone d'une personne "
+                class="temoignage_icone"
+              />
+            </div>
+            <div class="temoignage_text__container">
+              <h5 class="temoignage_nom">Marco</h5>
+              <p class="temoignage_commentaire">
+                Des artistes de haut niveau et une organisation parfaite.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
 
       <!-- 8e section-->
       <section class="contact" id="contact_ancre">
-        <h2 class="contact__title">Contact</h2>
-        <p class="contact_title--description">
-          Nous aimerions avoir de vos nouvelles!
-        </p>
-        <form class="contact__form">
-          <label for="name">nom</label>
-          <input type="text" placeholder="Entrez votre nom" />
-
-          <label for="email">Email</label>
-          <input type="text" placeholder="Entrez votre email" />
-
-          <label for="message">Message</label>
-          <input type="text" placeholder="Écrivez votre message ici" />
-
-          <button class="contact__button--secondary">Annuler</button>
-          <button class="contact__button--primary">Envoyer</button>
+        <div class="contact_container__title">
+          <h2 class="contact_title">Contact</h2>
+          <p class="contact_title__description">
+            Nous aimerions avoir de vos nouvelles!
+          </p>
+        </div>
+        <form class="contact_form">
+          <div class="contact_container__label">
+            <label class="contact_labelNom" for="name">Nom</label>
+            <input
+              class="contact_input"
+              type="text"
+              placeholder="Entrez votre nom"
+            />
+          </div>
+          <div class="contact_container__label">
+            <label class="contact_labelNom" for="email">Email</label>
+            <input
+              class="contact_input"
+              type="text"
+              placeholder="Entrez votre email"
+            />
+          </div>
+          <div class="contact_container__label">
+            <label class="contact_labelNom" for="message">Message</label>
+            <input
+              class="contact_input"
+              type="text"
+              placeholder="Écrivez votre message ici"
+            />
+          </div>
+          <div class="contact_button__container">
+            <button class="contact_button contact_button--secondary">
+              Annuler
+            </button>
+            <button class="contact_button contact_button--primary">
+              Envoyer
+            </button>
+          </div>
         </form>
       </section>
     </main>
     <!-- BAS DE PAGE-->
-    <footer class="bas_de_page">
-      <section class="bas_de_page__container">
-        <div class="bas_de_page--container">
+    <footer class="footer">
+      <section class="footer_container">
+        <div class="footer_container">
           <a class="btn__billet--accent" href="">Obetnez-vos billet</a>
           <!-- Même balise que la naviguation car c'est le même lien et même couleurs-->
-          <a href="" class="bas_de_page__links">Politique de confidentialité</a>
-          <a href="" class="bas_de_page__links">Conditions d'utilisation</a>
-          <a href="" class="bas_de_page__links"
-            >© 2023 Festival Lumière Urbaine</a
-          >
+          <a href="" class="footer__links">Politique de confidentialité</a>
+          <a href="" class="footer__links">Conditions d'utilisation</a>
+          <a href="" class="footer__links">© 2023 Festival Lumière Urbaine</a>
         </div>
       </section>
     </footer>

@@ -11,3 +11,5 @@ pour mettre les lettres dans le calendrier j'ai utilisé chat gpt. je lui est de
 j'ai modifier plusieurs classe de mon html car elle ne respectait pas entierement le BEM, j'en est laisser quelque une car elle fesait du sens mais la plupart on été remplacer. De plus j'ai du enlever certaine balise css et un peu de code parce que il se repétais, comme les titre, (chaque section avait un titre de la meme grosseur, et je les répètait a chaque fois, alors que je pouvais juste faire 1 balise et du code pour tout les titres.)
 
 j'ai continuer mon css j'ai fait 2 nouvelle section et j'ai encore modifier mes classe ( les classe en bas de page; footer)
+
+j'ai terminer la section partenaire, et j'ai commencer la section temoignage. j'aissaie de tout regrouper ce qui vas ensemble, comme la section témoignage qui est essentiellement la même que la section horaire.
