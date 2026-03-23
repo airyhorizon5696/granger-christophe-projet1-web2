@@ -1,20 +1,14 @@
-j'ai commencer le projet en fesant le html en premier, j'ai écris section par section avec les classes.
-quand j'ai fini le html j'ai fait le root avec les couleurs, les variable etc.
+J'ai commencé le projet en faisant le HTML en premier ; j'ai écrit section par section avec les classes. Quand j'ai fini le HTML, j'ai fait le :root avec les couleurs, les variables, etc.
 
-2 jours ensuite j'ai entamer le css et j'ai du modifier quelque élément de mon html comme ajouter des div et des conteneur, j'ai du modifier quelque classe qui n'était pas bien identifier et j'ai fait 3 section plus la nav bar
+Deux jours ensuite, j'ai entamé le CSS et j'ai dû modifier quelques éléments de mon HTML, comme ajouter des divs et des conteneurs. J'ai dû modifier quelques classes qui n'étaient pas bien identifiées et j'ai fait trois sections plus la barre de navigation. J'ai aussi fait le background et la base de chaque section (couleurs et padding).
 
-j'ai aussi fait le background et la base des base de chaque section
+(Au retour de la relâche)
+Pour mettre les lettres dans le calendrier, j'ai utilisé ChatGPT. Je lui ai demandé comment mettre une lettre dans une image et je lui ai envoyé mon code (déjà fait) pour qu'il m'explique comment faire, parce que je ne trouvais pas la solution à mon problème dans les notes de cours. Finalement, j'avais la solution, je l'avais juste mal exécutée.
 
-(au retour de la relache)
-pour mettre les lettres dans le calendrier j'ai utilisé chat gpt. je lui est demander comment mettre une lettre dans une image et je lui est envoyer mon code (déja fait) pour qu'il m'explique comment faire, parce que je ne trouvais pas la solution a mon problème dans les notes de cours --- finalemnt j'avais la solution je l'avais juste mal executer
+J'ai modifié plusieurs classes de mon HTML car elles ne respectaient pas entièrement le BEM. J'en ai laissé quelques-unes car elles faisaient du sens, mais la plupart ont été remplacées. De plus, j'ai dû enlever certaines balises CSS et un peu de code parce qu'il se répétait, comme pour les titres (chaque section avait un titre de la même grosseur et je les répétais à chaque fois, alors que je pouvais juste faire une balise et du code pour tous les titres).
 
-j'ai modifier plusieurs classe de mon html car elle ne respectait pas entierement le BEM, j'en est laisser quelque une car elle fesait du sens mais la plupart on été remplacer. De plus j'ai du enlever certaine balise css et un peu de code parce que il se repétais, comme les titre, (chaque section avait un titre de la meme grosseur, et je les répètait a chaque fois, alors que je pouvais juste faire 1 balise et du code pour tout les titres.)
+J'ai continué mon CSS, j'ai fait deux nouvelles sections et j'ai encore modifié mes classes (les classes en bas de page ; footer). J'ai terminé la section partenaire et j'ai commencé la section témoignage. J'essaie de tout regrouper ce qui va ensemble, comme la section témoignage qui est essentiellement la même que la section horaire. Dans la même soirée, j'ai aussi terminé les sections témoignage, contact et la section de bas de page.
 
-j'ai continuer mon css j'ai fait 2 nouvelle section et j'ai encore modifier mes classe ( les classe en bas de page; footer)
+J'ai regroupé le CSS qui était le même pour les sections, comme le padding, le display: flex, etc., et je les ai mis dans un seul bloc. De base, mon CSS était très linéaire, une section à la fois, mais maintenant que j'ai regroupé certaines classes (même si je sais qu'il m'en reste à trier et regrouper), il est devenu plus « chaotique ». J'ai mis des commentaires pour expliquer mes choix.
 
-j'ai terminer la section partenaire, et j'ai commencer la section temoignage. j'aissaie de tout regrouper ce qui vas ensemble, comme la section témoignage qui est essentiellement la même que la section horaire.
-dans la même soirée j'ai aussi terminer la section temoignage, contact et la section de bas de page
-j'ai regrouper le css qui était le même pour les sections comme le padding display flex etc.. et je l'es est mis dans un seule bloc.
-De base mon css était très linéaire, 1 section a la fois, mais maintenant que j'ai regrouper certaine classe ( même si je sais qu'il m'en reste à trier et regrouper ) il est devenue plus "chaotique" j'ai mis des commentaires pour expliquer mes choix
-
-pour le prochain devoirs ou le prochain projet je prévois classer mon css par éléments / blocs et pas par sections.
+Pour le prochain devoir ou le prochain projet, je prévois classer mon CSS par éléments / blocs et pas par sections. J'ai ajouté du flex-wrap dans les sections pour que ce soit plus responsive.

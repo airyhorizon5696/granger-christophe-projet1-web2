@@ -364,7 +364,6 @@ h5 {
 
 .programmation__description,
 .artiste__description {
-  /* tout les gens donc pour la section programation et artiste*/
   color: var(--color-primary, #118ab2);
   font-size: var(--font-size-base);
   font-weight: 400;
